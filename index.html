@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快点 Mac App 精选推荐 - 发现更好的 macOS 体验</title>
+    <meta name="description" content="精选全球优质 Mac 应用推荐，涵盖效率工具、开发神器、媒体播放、系统增强等多个分类。采用 Apple UI 设计风格，为您提供最纯净、最专业的 Mac 软件发现体验。">
+    <meta name="keywords" content="Mac应用, macOS软件推荐, Mac必备软件, 效率工具, 开发工具, Apple UI, 软件库, Mac神器, Raycast, Alfred, Arc浏览器">
+    <meta name="author" content="Mac App 精选推荐">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fbfbfd;
+            background-image: radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, rgba(0, 113, 227, 0.03) 0, transparent 50%);
+            color: #1d1d1f;
+            min-height: 100vh;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            border-color: rgba(0, 113, 227, 0.3);
+        }
+
+        /* 优化图标样式 */
+        .icon-container {
+            position: relative;
+            width: 72px;
+            height: 72px;
+            flex-shrink: 0;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
+                        0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-pill {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .category-pill.active {
+            background-color: #0071e3;
+            color: white;
+            border-color: #0071e3;
+            box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+        }
+
+        /* 隐藏滚动条但保持功能 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 导航栏 -->
+    <nav class="glass sticky top-0 z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fab fa-apple text-2xl"></i>
+                    <span class="text-xl font-semibold tracking-tight">快点 Mac Apps</span>
+                </div>
+                
+                <!-- 搜索框 -->
+                <div class="relative w-full max-w-md ml-4">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400 text-sm"></i>
+                    </div>
+                    <input type="text" id="searchInput" 
+                        class="block w-full pl-10 pr-3 py-2 border-none bg-gray-100/50 rounded-full text-sm leading-5 placeholder-gray-500 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all duration-200" 
+                        placeholder="搜索应用、分类或描述...">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 头部 -->
+        <header class="mb-12 text-center sm:text-left">
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">探索精选 Mac 应用</h1>
+            <p class="text-xl text-gray-500 max-w-2xl">发现让你的 Mac 变得更强大的工具，提升你的工作效率和创意表达。</p>
+        </header>
+
+        <!-- 分类筛选 -->
+        <section class="mb-10 overflow-x-auto no-scrollbar">
+            <div class="flex space-x-3 pb-2" id="categoryContainer">
+                <button class="category-pill active px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 shadow-sm hover:border-gray-300 transition-all" data-category="全部">全部</button>
+                <!-- 分类将由 JS 动态生成 -->
+            </div>
+        </section>
+
+        <!-- 应用网格 -->
+        <section id="appGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 加载骨架屏 -->
+            <div class="animate-pulse bg-white rounded-3xl p-6 h-48 shadow-sm"></div>
+            <div class="animate-pulse bg-white rounded-3xl p-6 h-48 shadow-sm"></div>
+            <div class="animate-pulse bg-white rounded-3xl p-6 h-48 shadow-sm"></div>
+        </section>
+        
+        <!-- 空状态 -->
+        <div id="emptyState" class="hidden py-20 text-center">
+            <div class="text-6xl mb-4 text-gray-300"><i class="fas fa-search"></i></div>
+            <h3 class="text-xl font-medium text-gray-900">未找到相关应用</h3>
+            <p class="text-gray-500 mt-2">换个关键词试试吧</p>
+        </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 py-12 border-t border-gray-200 mt-12 text-center text-sm text-gray-400">
+        <p>© 快点 Mac App 精选推荐 · 发现更好的 macOS 体验</p>
+    </footer>
+
+    <script>
+        let allApps = [];
+        const appGrid = document.getElementById('appGrid');
+        const searchInput = document.getElementById('searchInput');
+        const categoryContainer = document.getElementById('categoryContainer');
+        const emptyState = document.getElementById('emptyState');
+
+        // 初始化：获取数据
+        async function fetchApps() {
+            try {
+                const response = await fetch('apps.json');
+                allApps = await response.json();
+                renderCategories();
+                renderApps(allApps);
+            } catch (error) {
+                console.error('加载应用数据失败:', error);
+                appGrid.innerHTML = '<p class="text-red-500 col-span-full text-center py-10">加载数据失败，请检查网络连接。</p>';
+            }
+        }
+
+        // 渲染分类按钮
+        function renderCategories() {
+            const categories = ['全部', ...new Set(allApps.map(app => app.category))];
+            categoryContainer.innerHTML = categories.map(cat => `
+                <button class="category-pill px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 shadow-sm hover:border-gray-300 transition-all ${cat === '全部' ? 'active' : ''}" 
+                        data-category="${cat}">
+                    ${cat}
+                </button>
+            `).join('');
+
+            // 绑定分类点击事件
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.category-pill').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    filterAndSearch();
+                });
+            });
+        }
+
+        // 渲染应用卡片
+        function renderApps(apps) {
+            if (apps.length === 0) {
+                appGrid.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            appGrid.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+
+            const gradients = [
+                'linear-gradient(135deg, #FF5E3A 0%, #FF2A68 100%)',
+                'linear-gradient(135deg, #6227BA 0%, #D82D7E 100%)',
+                'linear-gradient(135deg, #1AD6FD 0%, #1D62F0 100%)',
+                'linear-gradient(135deg, #52EDC7 0%, #5AC8FB 100%)',
+                'linear-gradient(135deg, #FFCC00 0%, #FF9500 100%)',
+                'linear-gradient(135deg, #4CD964 0%, #5AC8FA 100%)',
+                'linear-gradient(135deg, #8E8E93 0%, #636366 100%)'
+            ];
+
+            appGrid.innerHTML = apps.map((app, index) => {
+                const gradient = gradients[index % gradients.length];
+                const firstLetter = app.name.charAt(0);
+                
+                return `
+                <div class="app-card rounded-3xl p-6 shadow-sm flex flex-col h-full">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="icon-container" style="background: ${gradient}">
+                            <span class="text-white text-3xl font-bold uppercase tracking-tighter">
+                                ${firstLetter}
+                            </span>
+                        </div>
+                        <div class="flex-1 min-w-0 pt-1">
+                            <h3 class="text-lg font-bold text-gray-900 truncate leading-tight">${app.name}</h3>
+                            <span class="inline-block px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase bg-blue-50 text-blue-600 rounded-md mt-1 border border-blue-100/50">
+                                ${app.category}
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 line-clamp-3 mb-6 flex-grow leading-relaxed">
+                        ${app.description}
+                    </p>
+                    <a href="${app.url}" target="_blank" 
+                       class="inline-flex items-center justify-center px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-blue-600 font-bold text-xs rounded-full transition-all group">
+                        获取应用
+                        <i class="fas fa-arrow-right ml-2 text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            `}).join('');
+        }
+
+        // 过滤和搜索逻辑
+        function filterAndSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.category-pill.active').dataset.category;
+
+            const filteredApps = allApps.filter(app => {
+                const matchesSearch = app.name.toLowerCase().includes(searchTerm) || 
+                                     app.description.toLowerCase().includes(searchTerm) ||
+                                     app.category.toLowerCase().includes(searchTerm);
+                const matchesCategory = activeCategory === '全部' || app.category === activeCategory;
+                return matchesSearch && matchesCategory;
+            });
+
+            renderApps(filteredApps);
+        }
+
+        // 搜索框事件
+        searchInput.addEventListener('input', filterAndSearch);
+
+        // 启动
+        fetchApps();
+    </script>
+</body>
+</html>

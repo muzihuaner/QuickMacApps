@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Raycast",
+    "category": "效率",
+    "description": "Raycast 是一个极速、完全可扩展的启动器。它可以让你完成任务、计算、共享公共链接等。",
+    "url": "https://www.raycast.com/"
+  },
+  {
+    "id": 2,
+    "name": "Arc",
+    "category": "浏览器",
+    "description": "Arc 是浏览器的未来。它不仅是一个浏览器，更是一个整理你互联网生活的操作系统。",
+    "url": "https://arc.net/"
+  },
+  {
+    "id": 3,
+    "name": "IINA",
+    "category": "媒体",
+    "description": "现代的 macOS 视频播放器。基于 mpv，拥有优雅的界面和强大的功能。",
+    "url": "https://iina.io/"
+  },
+  {
+    "id": 4,
+    "name": "Visual Studio Code",
+    "category": "开发",
+    "description": "重新定义的代码编辑。开源、免费，支持几乎所有编程语言和海量插件。",
+    "url": "https://code.visualstudio.com/"
+  },
+  {
+    "id": 5,
+    "name": "CleanMyMac X",
+    "category": "工具",
+    "description": "Mac 必备的一键式清理和优化工具。保持您的 Mac 运行如新。",
+    "url": "https://macpaw.com/cleanmymac"
+  },
+  {
+    "id": 6,
+    "name": "Bear",
+    "category": "效率",
+    "description": "优美的写作和笔记应用。支持 Markdown，跨设备同步，极具设计感。",
+    "url": "https://bear.app/"
+  },
+  {
+    "id": 7,
+    "name": "Rectangle",
+    "category": "工具",
+    "description": "开源的窗口管理工具。通过键盘快捷键或拖拽轻松调整窗口大小和位置。",
+    "url": "https://rectangleapp.com/"
+  },
+  {
+    "id": 8,
+    "name": "Downie",
+    "category": "媒体",
+    "description": "macOS 上最强大的视频下载工具。支持超过 1000 个视频网站，极速下载。",
+    "url": "https://software.charliemonroe.net/downie/"
+  },
+  {
+    "id": 9,
+    "name": "MacZip",
+    "category": "工具",
+    "description": "专为 macOS 设计的压缩软件。免费、简洁、支持多种格式，完美解决乱码问题。",
+    "url": "https://ezip.awehunt.com/"
+  },
+  {
+    "id": 10,
+    "name": "Alfred",
+    "category": "效率",
+    "description": "macOS 上屡获殊荣的应用，通过热键、关键字、文本扩展等提高您的效率。",
+    "url": "https://www.alfredapp.com/"
+  },
+  {
+    "id": 11,
+    "name": "Shottr",
+    "category": "工具",
+    "description": "面向设计师、前端工程师和所有人的极速、小巧、免费截图工具。",
+    "url": "https://shottr.cc/"
+  },
+  {
+    "id": 12,
+    "name": "Maccy",
+    "category": "效率",
+    "description": "轻量级剪贴板管理器，专为 macOS 设计，简单易用，支持多种格式。",
+    "url": "https://maccy.app/"
+  },
+  {
+    "id": 13,
+    "name": "Obsidian",
+    "category": "开发",
+    "description": "强大的本地知识库，基于 Markdown 文件，支持海量插件 and 双向链接。",
+    "url": "https://obsidian.md/"
+  },
+  {
+    "id": 14,
+    "name": "Bob",
+    "category": "工具",
+    "description": "macOS 平台端开即用的划词翻译和 OCR 软件，支持多种翻译服务和插件。",
+    "url": "https://bobtranslate.com/"
+  },
+  {
+    "id": 15,
+    "name": "PicGo",
+    "category": "工具",
+    "description": "一个用于快速上传图片并获取图片 URL 链接的工具，支持多种图床。",
+    "url": "https://github.com/Molunerfinn/PicGo"
+  },
+  {
+    "id": 16,
+    "name": "Snipaste",
+    "category": "工具",
+    "description": "截图 + 贴图，将截图贴在屏幕上，大大提高你的工作效率。",
+    "url": "https://www.snipaste.com/"
+  },
+  {
+    "id": 17,
+    "name": "Figma",
+    "category": "开发",
+    "description": "协作式界面设计工具，连接团队，让每个人都能参与设计过程。",
+    "url": "https://www.figma.com/"
+  },
+  {
+    "id": 18,
+    "name": "TablePlus",
+    "category": "开发",
+    "description": "现代、原生、友好的数据库管理工具，支持 MySQL, PostgreSQL, SQLite 等。",
+    "url": "https://tableplus.com/"
+  },
+  {
+    "id": 19,
+    "name": "Kap",
+    "category": "媒体",
+    "description": "开源的屏幕录制工具，专为 macOS 打造。界面简洁，支持导出多种格式。",
+    "url": "https://getkap.co/"
+  },
+  {
+    "id": 20,
+    "name": "Hidden Bar",
+    "category": "工具",
+    "description": "超轻量级的菜单栏隐藏工具。让你的 macOS 菜单栏变得整洁清爽。",
+    "url": "https://github.com/dwarvesf/hidden"
+  },
+  {
+    "id": 21,
+    "name": "AppCleaner",
+    "category": "工具",
+    "description": "小巧实用的卸载工具。彻底清理应用程序及其关联的所有零碎文件。",
+    "url": "https://freemacsoft.net/appcleaner/"
+  },
+  {
+    "id": 22,
+    "name": "HandBrake",
+    "category": "媒体",
+    "description": "开源视频转码工具。几乎可以将任何格式的视频转换为常用的现代格式。",
+    "url": "https://handbrake.fr/"
+  },
+  {
+    "id": 23,
+    "name": "Motrix",
+    "category": "工具",
+    "description": "全能的下载工具。界面精美，支持下载 HTTP, FTP, BitTorrent, Magnet 等。",
+    "url": "https://motrix.app/"
+  },
+  {
+    "id": 24,
+    "name": "Postman",
+    "category": "开发",
+    "description": "协作平台，用于 API 开发。简化构建、测试和修改 API 的每个步骤。",
+    "url": "https://www.postman.com/"
+  },
+  {
+    "id": 25,
+    "name": "Notion",
+    "category": "效率",
+    "description": "将笔记、文档、项目管理和维基百科整合在一起的下一代工作空间。",
+    "url": "https://www.notion.so/"
+  },
+  {
+    "id": 26,
+    "name": "Telegram",
+    "category": "社交",
+    "description": "纯粹的即时通讯应用。简单、快速、同步且安全，支持海量群组和机器人。",
+    "url": "https://telegram.org/"
+  },
+  {
+    "id": 27,
+    "name": "Stats",
+    "category": "系统",
+    "description": "开源的 macOS 系统监控工具。在菜单栏实时查看 CPU、内存、磁盘和网络状态。",
+    "url": "https://github.com/exelban/stats"
+  },
+  {
+    "id": 28,
+    "name": "Clash Verge",
+    "category": "系统",
+    "description": "基于 Tauri 的 Clash GUI 客户端。界面现代、跨平台，支持多种代理协议。",
+    "url": "https://github.com/clash-verge-rev/clash-verge-rev"
+  },
+  {
+    "id": 29,
+    "name": "Google Chrome",
+    "category": "浏览器",
+    "description": "全球最流行的浏览器。快速、安全且内置 Google 的智能功能，支持海量扩展程序。",
+    "url": "https://www.google.cn/chrome/"
+  },
+  {
+    "id": 30,
+    "name": "Clipy",
+    "category": "效率",
+    "description": "macOS 上经典的剪贴板管理工具。开源、轻量，支持记录多种历史内容并设置快捷键。",
+    "url": "https://github.com/Clipy/Clipy"
+  }
+]
