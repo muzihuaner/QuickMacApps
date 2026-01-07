@@ -92,13 +92,22 @@
                 </div>
                 
                 <!-- 搜索框 -->
-                <div class="relative w-full max-w-md ml-4">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400 text-sm"></i>
+                <div class="relative w-full max-w-md ml-4 flex items-center space-x-3">
+                    <div class="relative flex-1">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400 text-sm"></i>
+                        </div>
+                        <input type="text" id="searchInput" 
+                            class="block w-full pl-10 pr-3 py-2 border-none bg-gray-100/50 rounded-full text-sm leading-5 placeholder-gray-500 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all duration-200" 
+                            placeholder="搜索应用、分类或描述...">
                     </div>
-                    <input type="text" id="searchInput" 
-                        class="block w-full pl-10 pr-3 py-2 border-none bg-gray-100/50 rounded-full text-sm leading-5 placeholder-gray-500 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 transition-all duration-200" 
-                        placeholder="搜索应用、分类或描述...">
+                    
+                    <!-- GitHub 按钮 -->
+                    <a href="https://github.com/muzihuaner/QuickMacApps/issues" target="_blank" 
+                       class="flex-shrink-0 inline-flex items-center px-4 py-2 bg-black text-white rounded-full text-[10px] sm:text-xs font-bold hover:bg-gray-800 transition-colors shadow-sm whitespace-nowrap">
+                        <i class="fab fa-github mr-1.5 sm:mr-2"></i>
+                        提交应用
+                    </a>
                 </div>
             </div>
         </div>
