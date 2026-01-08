@@ -150,6 +150,25 @@
             <h3 class="text-xl font-medium text-gray-900">未找到相关应用</h3>
             <p class="text-gray-500 mt-2">换个关键词试试吧</p>
         </div>
+
+        <!-- 友情链接 -->
+        <section class="mt-20 pt-10 border-t border-gray-100">
+            <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-6 text-center sm:text-left">友情链接</h3>
+            <div class="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-4">
+               <a href="https://www.apple.com.cn/" target="_blank" class="text-gray-500 hover:text-black transition-colors text-sm flex items-center">
+                    <i class="fab fa-apple mr-2"></i>Apple 中国官网
+                </a>
+                <a href="https://apps.apple.com/cn/mac/" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors text-sm flex items-center">
+                    <i class="fab fa-apple mr-2"></i>App Store
+                </a>
+                <a href="https://brew.sh/" target="_blank" class="text-gray-500 hover:text-orange-600 transition-colors text-sm flex items-center">
+                    <i class="fas fa-beer mr-2"></i>Homebrew
+                </a>
+                <a href="https://support.apple.com/zh-cn" target="_blank" class="text-gray-500 hover:text-orange-600 transition-colors text-sm flex items-center">
+                    <i class="fab fa-apple mr-2"></i>Apple支持
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer class="max-w-6xl mx-auto px-4 py-12 border-t border-gray-200 mt-12 text-center text-sm text-gray-400">
@@ -167,7 +186,9 @@
         async function fetchApps() {
             try {
                 const response = await fetch('apps.json');
-                allApps = await response.json();
+                const data = await response.json();
+                // 按照名称字母顺序排序
+                allApps = data.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
                 renderCategories();
                 renderApps(allApps);
             } catch (error) {

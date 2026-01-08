@@ -218,7 +218,7 @@
   },
   {
     "id": 32,
-    "name": "Adobe Creative Cloud",
+    "name": "Adobe 全家桶",
     "category": "媒体",
     "description": "包含 Photoshop, Premiere Pro, After Effects 等在内的创意设计全家桶，行业标准工具。",
     "url": "https://www.adobe.com/cn/creativecloud.html"
@@ -285,5 +285,117 @@
     "category": "媒体",
     "description": "Apple 专业级视频编辑软件。专为 Mac 硬件优化，提供极致的剪辑性能。",
     "url": "https://www.apple.com.cn/final-cut-pro/"
+  },
+  {
+    "id": 42,
+    "name": "Typora",
+    "category": "开发",
+    "description": "最受欢迎的 Markdown 编辑器之一。所见即所得的极致体验，支持多种主题和导出格式。",
+    "url": "https://typora.io/"
+  },
+  {
+    "id": 43,
+    "name": "Xcode",
+    "category": "开发",
+    "description": "Apple 官方集成开发环境。包含构建 iOS、macOS 等 Apple 平台应用所需的一切工具。",
+    "url": "https://developer.apple.com/xcode/"
+  },
+  {
+    "id": 44,
+    "name": "iTerm2",
+    "category": "开发",
+    "description": "macOS 上最强大的终端替代品。支持分屏、搜索、自动补全等众多高级功能。",
+    "url": "https://iterm2.com/"
+  },
+  {
+    "id": 45,
+    "name": "Terminus",
+    "category": "开发",
+    "description": "现代化的跨平台终端。界面美观，支持 SSH 管理、SFTP 及高度自定义。",
+    "url": "https://termius.com/"
+  },
+  {
+    "id": 46,
+    "name": "Draw.io",
+    "category": "工作",
+    "description": "免费开源的流程图绘制工具。功能强大，支持离线使用及多种图表类型。",
+    "url": "https://www.drawio.com/"
+  },
+  {
+    "id": 47,
+    "name": "Xmind",
+    "category": "工作",
+    "description": "全功能的思维导图和头脑风暴软件。帮助你理清思路，捕捉创意，提升效率。",
+    "url": "https://xmind.cn/"
+  },
+  {
+    "id": 48,
+    "name": "OBS Studio",
+    "category": "媒体",
+    "description": "开源的视频录制和直播软件。支持多源采集、实时混音及高度自定义推流。",
+    "url": "https://obsproject.com/"
+  },
+  {
+    "id": 49,
+    "name": "剪映专业版",
+    "category": "媒体",
+    "description": "抖音出品的专业剪辑工具。界面直观，内置海量素材库和 AI 智能剪辑功能。",
+    "url": "https://www.capcut.cn/"
+  },
+  {
+    "id": 50,
+    "name": "qBittorrent",
+    "category": "工具",
+    "description": "轻量、开源的 BitTorrent 客户端。无广告，支持远程控制及强大的下载管理功能。",
+    "url": "https://www.qbittorrent.org/"
+  },
+  {
+    "id": 51,
+    "name": "向日葵",
+    "category": "工具",
+    "description": "国产远程控制专家。支持跨平台远控、文件传输、远程开机等多种实用功能。",
+    "url": "https://sunlogin.oray.com/"
+  },
+  {
+    "id": 52,
+    "name": "Windows 远程桌面",
+    "category": "工具",
+    "description": "Microsoft 官方远程桌面工具。让您从 Mac 轻松连接到远程 Windows 电脑或应用。",
+    "url": "https://apps.apple.com/cn/app/microsoft-remote-desktop/id1295203466"
+  },
+  {
+    "id": 53,
+    "name": "Parallels Desktop",
+    "category": "工具",
+    "description": "Mac 上最强大的虚拟机软件。无需重启即可在 Mac 上运行 Windows 应用程序。",
+    "url": "https://www.parallels.cn/products/desktop/"
+  },
+  {
+    "id": 54,
+    "name": "RustDesk",
+    "category": "工具",
+    "description": "开源远程桌面软件。自建服务器，安全可控，是 TeamViewer 的绝佳替代品。",
+    "url": "https://rustdesk.com/zh/"
+  },
+  {
+    "id": 55,
+    "name": "腾讯柠檬",
+    "category": "系统",
+    "description": "腾讯出品的 Mac 清理工具。深度扫描系统垃圾，管理启动项，让系统保持清爽。",
+    "url": "https://lemon.qq.com/"
+  },
+  {
+    "id": 56,
+    "name": "Geekbench 6",
+    "category": "系统",
+    "description": "跨平台处理器和显卡性能测试工具。快速了解您的 Mac 硬件性能表现。",
+    "url": "https://www.geekbench.com/"
+  },
+  {
+    "id": 57,
+    "name": "Blackmagic Disk Speed Test",
+    "category": "系统",
+    "description": "直观的硬盘读写速度测试工具。衡量您的磁盘驱动器在处理视频制作时的性能。",
+    "url": "https://apps.apple.com/cn/app/blackmagic-disk-speed-test/id425264550"
   }
 ]
