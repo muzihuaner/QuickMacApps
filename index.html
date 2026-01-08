@@ -85,14 +85,22 @@
     <!-- 导航栏 -->
     <nav class="glass sticky top-0 z-50 border-b border-gray-200/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                    <i class="fab fa-apple text-2xl"></i>
-                    <span class="text-xl font-semibold tracking-tight">快点 Mac Apps</span>
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3 sm:h-16 space-y-3 sm:space-y-0">
+                <div class="flex items-center space-x-2 w-full sm:w-auto justify-between sm:justify-start">
+                    <div class="flex items-center space-x-2">
+                        <i class="fab fa-apple text-2xl"></i>
+                        <span class="text-xl font-semibold tracking-tight">快点 Mac Apps</span>
+                    </div>
+                    <!-- 移动端提交按钮 - 仅在移动端标题旁显示 -->
+                    <a href="https://github.com/muzihuaner/QuickMacApps/issues" target="_blank" 
+                       class="sm:hidden inline-flex items-center px-3 py-1.5 bg-black text-white rounded-full text-[10px] font-bold">
+                        <i class="fab fa-github mr-1"></i>
+                        提交
+                    </a>
                 </div>
                 
                 <!-- 搜索框 -->
-                <div class="relative w-full max-w-md ml-4 flex items-center space-x-3">
+                <div class="relative w-full max-w-md flex items-center space-x-3">
                     <div class="relative flex-1">
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <i class="fas fa-search text-gray-400 text-sm"></i>
@@ -102,10 +110,10 @@
                             placeholder="搜索应用、分类或描述...">
                     </div>
                     
-                    <!-- GitHub 按钮 -->
+                    <!-- 桌面端提交按钮 -->
                     <a href="https://github.com/muzihuaner/QuickMacApps/issues" target="_blank" 
-                       class="flex-shrink-0 inline-flex items-center px-4 py-2 bg-black text-white rounded-full text-[10px] sm:text-xs font-bold hover:bg-gray-800 transition-colors shadow-sm whitespace-nowrap">
-                        <i class="fab fa-github mr-1.5 sm:mr-2"></i>
+                       class="hidden sm:inline-flex items-center px-4 py-2 bg-black text-white rounded-full text-xs font-bold hover:bg-gray-800 transition-colors shadow-sm whitespace-nowrap">
+                        <i class="fab fa-github mr-2"></i>
                         提交应用
                     </a>
                 </div>
@@ -113,16 +121,16 @@
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         <!-- 头部 -->
-        <header class="mb-12 text-center sm:text-left">
-            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4">探索精选 Mac 应用</h1>
-            <p class="text-xl text-gray-500 max-w-2xl">发现让你的 Mac 变得更强大的工具，提升你的工作效率和创意表达。</p>
+        <header class="mb-8 sm:mb-12 text-center sm:text-left">
+            <h1 class="text-3xl sm:text-5xl font-bold tracking-tight mb-3 sm:mb-4">探索精选 Mac 应用</h1>
+            <p class="text-base sm:text-xl text-gray-500 max-w-2xl">发现让你的 Mac 变得更强大的工具，提升你的工作效率和创意表达。</p>
         </header>
 
         <!-- 分类筛选 -->
-        <section class="mb-10 overflow-x-auto no-scrollbar">
-            <div class="flex space-x-3 pb-2" id="categoryContainer">
+        <section class="mb-8 sm:mb-10 overflow-x-auto no-scrollbar -mx-4 px-4">
+            <div class="flex space-x-2 sm:space-x-3 pb-2 min-w-max" id="categoryContainer">
                 <button class="category-pill active px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 shadow-sm hover:border-gray-300 transition-all" data-category="全部">全部</button>
                 <!-- 分类将由 JS 动态生成 -->
             </div>

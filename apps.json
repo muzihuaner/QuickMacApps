@@ -208,5 +208,82 @@
     "category": "效率",
     "description": "macOS 上经典的剪贴板管理工具。开源、轻量，支持记录多种历史内容并设置快捷键。",
     "url": "https://github.com/Clipy/Clipy"
+  },
+  {
+    "id": 31,
+    "name": "JetBrains 全家桶",
+    "category": "开发",
+    "description": "包含 IntelliJ IDEA, PyCharm, WebStorm 等在内的全系列专业开发工具，开发者必备。",
+    "url": "https://www.jetbrains.com/zh-cn/"
+  },
+  {
+    "id": 32,
+    "name": "Adobe Creative Cloud",
+    "category": "媒体",
+    "description": "包含 Photoshop, Premiere Pro, After Effects 等在内的创意设计全家桶，行业标准工具。",
+    "url": "https://www.adobe.com/cn/creativecloud.html"
+  },
+  {
+    "id": 33,
+    "name": "QQ",
+    "category": "社交",
+    "description": "腾讯出品的国民级社交工具，Mac 版采用全新 NT 架构，极致流畅。",
+    "url": "https://im.qq.com/macqq/index.shtml"
+  },
+  {
+    "id": 34,
+    "name": "微信",
+    "category": "社交",
+    "description": "必备的通讯工具。支持多端同步、视频通话及小程序，办公社交两不误。",
+    "url": "https://mac.weixin.qq.com/"
+  },
+  {
+    "id": 35,
+    "name": "WPS Office",
+    "category": "工作",
+    "description": "金山出品的全能办公套件。完美兼容 Office 文档，支持云同步和海量模板。",
+    "url": "https://www.wps.cn/product/wpsmac"
+  },
+  {
+    "id": 36,
+    "name": "飞书",
+    "category": "工作",
+    "description": "先进团队的协作平台。集成聊天、日历、云文档和视频会议，极致协作体验。",
+    "url": "https://www.feishu.cn/"
+  },
+  {
+    "id": 37,
+    "name": "Microsoft Office",
+    "category": "工作",
+    "description": "包含 Word, Excel, PowerPoint 等在内的经典办公套件，行业通用标准。",
+    "url": "https://www.microsoft.com/zh-cn/microsoft-365/mac/microsoft-365-for-mac"
+  },
+  {
+    "id": 38,
+    "name": "Pages 文稿",
+    "category": "工作",
+    "description": "Apple 原生文字处理工具。设计精美，能够制作令人惊艳的文档和报告。",
+    "url": "https://www.apple.com.cn/pages/"
+  },
+  {
+    "id": 39,
+    "name": "Numbers 表格",
+    "category": "工作",
+    "description": "Apple 原生电子表格工具。打破传统表格限制，让数据展示更具创意。",
+    "url": "https://www.apple.com.cn/numbers/"
+  },
+  {
+    "id": 40,
+    "name": "Keynote 讲演",
+    "category": "工作",
+    "description": "Apple 原生演示文稿工具。拥有强大的动画效果，轻松制作电影级幻灯片。",
+    "url": "https://www.apple.com.cn/keynote/"
+  },
+  {
+    "id": 41,
+    "name": "Final Cut Pro",
+    "category": "媒体",
+    "description": "Apple 专业级视频编辑软件。专为 Mac 硬件优化，提供极致的剪辑性能。",
+    "url": "https://www.apple.com.cn/final-cut-pro/"
   }
 ]
